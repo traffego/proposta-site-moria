@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proposta Comercial — Novo Site Institucional | Moriá Consultoria e Projetos</title>
+    <meta property="og:title" content="Proposta Comercial — Novo Site Institucional | Moriá Consultoria e Projetos">
+    <meta property="og:description" content="Desenvolvimento do novo site institucional de alta performance para a Moriá Consultoria e Projetos, posicionando autoridade no Terceiro Setor e parcerias públicas.">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .mobile-only { display: none !important; }
+        .desktop-only { display: block !important; }
+        .mobile-module-card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 0.95rem;
+            background-color: var(--card);
+            display: flex;
+            flex-direction: column;
+            gap: 0.45rem;
+            margin-bottom: 0.75rem;
+            box-sizing: border-box;
+        }
+        .mobile-card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 0.5rem;
+        }
+        .mobile-card-header h4 {
+            font-size: 0.9rem;
+            font-weight: 700;
+            margin: 0;
+            color: var(--foreground);
+        }
+        .mobile-module-card p {
+            font-size: 0.8rem;
+            color: var(--muted-foreground);
+            margin: 0;
+            line-height: 1.45;
+        }
+        .badge-gold {
+            background: rgba(197, 155, 76, 0.15) !important;
+            color: #eab308 !important;
+            border-color: rgba(197, 155, 76, 0.35) !important;
+        }
+        .badge-blue {
+            background: rgba(59, 130, 246, 0.12) !important;
+            color: #60a5fa !important;
+            border-color: rgba(59, 130, 246, 0.35) !important;
+        }
+        .badge-green {
+            background: rgba(34, 197, 94, 0.12) !important;
+            color: #4ade80 !important;
+            border-color: rgba(34, 197, 94, 0.35) !important;
+        }
+        .solution-card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .solution-item-box {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 1.15rem;
+            background: rgba(24, 24, 27, 0.5);
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+        .solution-item-box:hover {
+            border-color: rgba(197, 155, 76, 0.4);
+            transform: translateY(-2px);
+        }
+        .solution-icon-wrap {
+            width: 2rem;
+            height: 2rem;
+            border-radius: calc(var(--radius) * 0.7);
+            background: rgba(197, 155, 76, 0.15);
+            border: 1px solid rgba(197, 155, 76, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #eab308;
+            font-weight: 700;
+            font-size: 0.8rem;
+            margin-bottom: 0.75rem;
+            font-family: var(--font-mono);
+        }
+        .governance-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        @media (max-width: 860px) {
+            .governance-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .client-discrete-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+        .client-discrete-item {
+            padding: 0.85rem 1rem;
+            border-radius: var(--radius);
+            background: rgba(24, 24, 27, 0.4);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            font-size: 0.8rem;
+            color: #e4e4e7;
+            transition: all 0.2s ease;
+        }
+        .client-discrete-item:hover {
+            border-color: rgba(255, 255, 255, 0.2);
+            background: rgba(24, 24, 27, 0.75);
+        }
+        .client-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #22c55e;
+            box-shadow: 0 0 8px rgba(34, 197, 94, 0.6);
+            flex-shrink: 0;
+        }
+        @media (max-width: 768px) {
+            .desktop-only { display: none !important; }
+            .mobile-only { display: block !important; }
+        }
+        @media (max-width: 640px) {
+            header {
+                flex-direction: row !important;
+                align-items: center !important;
+                justify-content: space-between !important;
+                gap: 0.75rem !important;
+                padding: 1.25rem 0 !important;
+            }
+            .profile-header {
+                align-items: center !important;
+                gap: 0.65rem !important;
+                max-width: calc(100% - 130px) !important;
+            }
+            .profile-avatar {
+                width: 2.75rem !important;
+                height: 2.75rem !important;
+                flex-shrink: 0;
+            }
+            .profile-name { font-size: 0.88rem !important; }
+            .profile-specialties { font-size: 0.65rem !important; line-height: 1.25 !important; }
+            .client-logo-group {
+                display: flex !important;
+                align-items: center !important;
+                gap: 0.85rem !important;
+                flex-shrink: 0 !important;
+            }
+            .client-logo-group img.logo-white {
+                max-height: 2.2rem !important;
+                object-fit: contain !important;
+            }
+        }
+    </style>
+</head>
+<body class="dark">
+
+    <div class="container animate-fade-in">
+
+        <!-- Header -->
+        <header style="justify-content: space-between; gap: 1rem; align-items: center; padding-top: 1.5rem; flex-wrap: nowrap;">
+            <div class="profile-header">
+                <img src="./avatar.png" alt="Jônathas Quintanilha (Garré)" class="profile-avatar">
+                <div class="profile-info">
+                    <div class="profile-name">Jônathas Quintanilha (Garré)</div>
+                    <div class="profile-specialties">Desenvolvedor de Sistemas | Engenharia de Software | +15 anos de experiência</div>
+                </div>
+            </div>
+            
+            <div class="client-logo-group" style="display: flex; align-items: center; gap: 1.25rem; flex-shrink: 0; flex-wrap: nowrap;">
+                <img src="./logo-moria.png" alt="Moriá Consultoria e Projetos" class="logo-white" style="height: 2.85rem; width: auto; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.95;">
+                <img src="./transferegov.png" alt="Transferegov.br" class="logo-white" style="height: 2.35rem; width: auto; object-fit: contain; filter: brightness(0) invert(1); opacity: 0.95;">
+            </div>
+        </header>
+
+        <!-- Document Hero -->
+        <div class="doc-hero">
+            <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 0.75rem;">
+                <span class="badge badge-gold">Site Institucional</span>
+                <span class="badge badge-blue">Terceiro Setor & MROSC</span>
+                <span class="badge badge-green">Alta Performance</span>
+            </div>
+            <h1>Desenvolvimento do Novo Site Institucional — Moriá Consultoria e Projetos</h1>
+            <p class="lead">Criação de plataforma digital moderna, rápida e institucionalmente impecável, projetada para consolidar a autoridade da Moriá perante institutos, associações, fundações (OSCs) e órgãos governamentais, destacando o ecossistema completo de 8 soluções técnicas e facilitando a captação de novas parcerias estratégicas.</p>
+            
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <span class="meta-label">Cliente</span>
+                    <span class="meta-val">Moriá Consultoria e Projetos Ltda.</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Documento</span>
+                    <span class="meta-val">Proposta Comercial & Técnica</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Versão</span>
+                    <span class="meta-val">1.0</span>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Validade</span>
+                    <span class="meta-val" style="color: #22c55e; font-weight: 700;">2 dias</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- 01. Módulos & Entregáveis -->
+        <section id="escopo">
+            <h2><span>01.</span> Módulos & Entregáveis do Projeto</h2>
+            <p style="color: var(--muted-foreground); margin-bottom: 1.25rem;">O projeto contempla o ciclo completo de planejamento, arquitetura da informação, design de interface (UI/UX), desenvolvimento frontend com código limpo e publicação em infraestrutura de alto desempenho.</p>
+            
+            <!-- Desktop Table -->
+            <div class="table-wrapper desktop-only">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 5%">#</th>
+                            <th style="width: 28%">Módulo / Entregável</th>
+                            <th>Funcionalidades & Detalhamento Técnico</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-family: var(--font-mono); color: var(--muted-foreground);">01</td>
+                            <td style="font-weight: 700; color: #fafafa;">Hero & Posicionamento de Autoridade</td>
+                            <td>Abertura de alto impacto comunicando a proposta de valor: <em>"Sua parceira estratégica na gestão de projetos e no fortalecimento do Terceiro Setor"</em>. Badges de conformidade com o Marco Regulatório (MROSC) e legislação da Administração Pública, transmitindo credibilidade técnica imediata.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: var(--font-mono); color: var(--muted-foreground);">02</td>
+                            <td style="font-weight: 700; color: #fafafa;">Apresentação Institucional & Diferenciais</td>
+                            <td>Seção corporativa contextualizando o suporte especializado a institutos, associações e OSCs. Foco em inteligência técnica, planejamento e compliance com normas ministeriais, portarias específicas e rigor na prestação de contas.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: var(--font-mono); color: var(--muted-foreground);">03</td>
+                            <td style="font-weight: 700; color: #fafafa;">Vitrine das 8 Soluções Estratégicas</td>
+                            <td>Apresentação modular e hierarquizada das 8 frentes de serviço da Moriá: Transferegov.br/CONVERJ, Fundo Nacional de Saúde (FNS), Projetos e Planos de Trabalho, Planilhas Orçamentárias, Monitoramento e Avaliação, Pesquisas e Análise de Dados, Prestação de Contas e Gestão/Consultoria Institucional.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: var(--font-mono); color: var(--muted-foreground);">04</td>
+                            <td style="font-weight: 700; color: #fafafa;">Governança: Missão, Visão e Valores</td>
+                            <td>Estruturação de bloco visual elegante destacando a Missão (fortalecimento do Terceiro Setor), a Visão de referência técnica e a régua de 8 Valores fundamentais (ética, transparência, excelência técnica, comprometimento, responsabilidade social, inovação, confiança e legalidade).</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: var(--font-mono); color: var(--muted-foreground);">05</td>
+                            <td style="font-weight: 700; color: #fafafa;">Área Discreta de Clientes & Parceiros</td>
+                            <td>Seção sóbria em grid minimalista exibindo a carteira de organizações atendidas e parceiros institucionais. Formato elegante que atesta a solidez de mercado da Moriá sem poluição visual ou excessos.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: var(--font-mono); color: var(--muted-foreground);">06</td>
+                            <td style="font-weight: 700; color: #fafafa;">Canal de Conversão & Diagnóstico Rápido</td>
+                            <td>Call-to-Action inteligente para captação de demandas de consultoria e agendamento de reuniões, com gatilho direto para o WhatsApp oficial com mensagem pré-formatada por tipo de necessidade.</td>
+                        </tr>
+                        <tr>
+                            <td style="font-family: var(--font-mono); color: var(--muted-foreground);">07</td>
+                            <td style="font-weight: 700; color: #fafafa;">Engenharia Moderna, SEO & Performance</td>
+                            <td>Arquitetura de alta performance com Next.js e Supabase, notas máximas no Google PageSpeed (Core Web Vitals), indexação para Google Search (Schema.org / JSON-LD) e publicação contínua na Vercel com SSL ativo.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Mobile Cards -->
+            <div class="mobile-only">
+                <div class="mobile-module-card">
+                    <div class="mobile-card-header">
+                        <h4>1. Hero & Posicionamento de Autoridade</h4>
+                        <span class="badge badge-gold" style="font-size: 0.65rem;">Principal</span>
+                    </div>
+                    <p>Abertura de impacto: proposta de valor da Moriá, foco em parcerias públicas, MROSC e conformidade com Ministérios.</p>
+                </div>
+
+                <div class="mobile-module-card">
+                    <div class="mobile-card-header">
+                        <h4>2. Apresentação Institucional</h4>
+                        <span class="badge" style="font-size: 0.65rem;">Institucional</span>
+                    </div>
+                    <p>Histórico, suporte a OSCs e o diferencial de unir planejamento, visão estratégica e segurança jurídica.</p>
+                </div>
+
+                <div class="mobile-module-card">
+                    <div class="mobile-card-header">
+                        <h4>3. As 8 Soluções Estratégicas</h4>
+                        <span class="badge badge-blue" style="font-size: 0.65rem;">Soluções</span>
+                    </div>
+                    <p>Cards detalhados para Transferegov/CONVERJ, FNS, Planos de Trabalho, Orçamentos, Monitoramento, Pesquisas, Prestação de Contas e Gestão Institucional.</p>
+                </div>
+
+                <div class="mobile-module-card">
+                    <div class="mobile-card-header">
+                        <h4>4. Missão, Visão e Valores</h4>
+                        <span class="badge" style="font-size: 0.65rem;">Governança</span>
+                    </div>
+                    <p>Apresentação visual da cultura, ética, conformidade técnica e integridade operacional da Moriá.</p>
+                </div>
+
+                <div class="mobile-module-card">
+                    <div class="mobile-card-header">
+                        <h4>5. Área Discreta de Clientes</h4>
+                        <span class="badge badge-green" style="font-size: 0.65rem;">Autoridade</span>
+                    </div>
+                    <p>Listagem discreta e elegante de organizações e instituições atendidas, reforçando prova social qualificada.</p>
+                </div>
+
+                <div class="mobile-module-card">
+                    <div class="mobile-card-header">
+                        <h4>6. Canal de Atendimento & WhatsApp</h4>
+                        <span class="badge" style="font-size: 0.65rem;">Conversão</span>
+                    </div>
+                    <p>Botões de contato direto para solicitação de diagnóstico e atendimento consultivo imediato via WhatsApp.</p>
+                </div>
+
+                <div class="mobile-module-card">
+                    <div class="mobile-card-header">
+                        <h4>7. Engenharia, SEO & Otimização</h4>
+                        <span class="badge" style="font-size: 0.65rem;">Infraestrutura</span>
+                    </div>
+                    <p>Carregamento ultra-rápido com Next.js na Vercel, Supabase, indexação no Google e total responsividade.</p>
+                </div>
+            </div>
+
+            <!-- Detalhamento Visual das 8 Soluções -->
+            <div style="margin-top: 2rem; border-top: 1px dashed var(--border); padding-top: 1.5rem;">
+                <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: #fafafa;">Estrutura do Hub de Soluções no Site</h3>
+                <p style="font-size: 0.8rem; color: var(--muted-foreground); margin-bottom: 1rem;">O novo portal organizará as soluções em cartões modulares e limpos, permitindo leitura objetiva por gestores públicos e diretores de OSCs:</p>
+                
+                <div class="solution-card-grid">
+                    <div class="solution-item-box">
+                        <div class="solution-icon-wrap">01</div>
+                        <h4 style="font-size: 0.88rem; font-weight: 700; color: #f4f4f5; margin-bottom: 0.4rem;">Transferegov.br e CONVERJ</h4>
+                        <p style="font-size: 0.77rem; color: #a1a1aa; line-height: 1.45; margin: 0;">Suporte integral à operacionalização dos sistemas federais e estaduais, cadastramento de propostas e acompanhamento técnico rigoroso de parcerias públicas.</p>
+                    </div>
+
+                    <div class="solution-item-box">
+                        <div class="solution-icon-wrap">02</div>
+                        <h4 style="font-size: 0.88rem; font-weight: 700; color: #f4f4f5; margin-bottom: 0.4rem;">Fundo Nacional de Saúde (FNS)</h4>
+                        <p style="font-size: 0.77rem; color: #a1a1aa; line-height: 1.45; margin: 0;">Apoio especializado à elaboração, adequação às portarias do Ministério da Saúde, cadastramento e operacionalização de propostas na área da saúde pública.</p>
+                    </div>
+
+                    <div class="solution-item-box">
+                        <div class="solution-icon-wrap">03</div>
+                        <h4 style="font-size: 0.88rem; font-weight: 700; color: #f4f4f5; margin-bottom: 0.4rem;">Projetos e Planos de Trabalho</h4>
+                        <p style="font-size: 0.77rem; color: #a1a1aa; line-height: 1.45; margin: 0;">Estruturação técnica e metodológica de propostas, definição de metas físicas mensuráveis, cronogramas de desembolso e planos de execução detalhados.</p>
+                    </div>
+
+                    <div class="solution-item-box">
+                        <div class="solution-icon-wrap">04</div>
+                        <h4 style="font-size: 0.88rem; font-weight: 700; color: #f4f4f5; margin-bottom: 0.4rem;">Planilhas Orçamentárias</h4>
+                        <p style="font-size: 0.77rem; color: #a1a1aa; line-height: 1.45; margin: 0;">Composição analítica de custos unitários, elaboração de memórias de cálculo, cotações de referência de mercado e planejamento orçamentário em conformidade legal.</p>
+                    </div>
+
+                    <div class="solution-item-box">
+                        <div class="solution-icon-wrap">05</div>
+                        <h4 style="font-size: 0.88rem; font-weight: 700; color: #f4f4f5; margin-bottom: 0.4rem;">Monitoramento e Avaliação</h4>
+                        <p style="font-size: 0.77rem; color: #a1a1aa; line-height: 1.45; margin: 0;">Acompanhamento sistemático da execução de metas, análise de indicadores qualitativos e quantitativos, verificação de cumprimento do cronograma e gestão de resultados.</p>
+                    </div>
+
+                    <div class="solution-item-box">
+                        <div class="solution-icon-wrap">06</div>
+                        <h4 style="font-size: 0.88rem; font-weight: 700; color: #f4f4f5; margin-bottom: 0.4rem;">Pesquisas e Análise de Dados</h4>
+                        <p style="font-size: 0.77rem; color: #a1a1aa; line-height: 1.45; margin: 0;">Condução de pesquisas de satisfação dos beneficiários, estudos de opinião pública, diagnósticos territoriais e relatórios de avaliação de impacto social.</p>
+                    </div>
+
+                    <div class="solution-item-box">
+                        <div class="solution-icon-wrap">07</div>
+                        <h4 style="font-size: 0.88rem; font-weight: 700; color: #f4f4f5; margin-bottom: 0.4rem;">Prestação de Contas</h4>
+                        <p style="font-size: 0.77rem; color: #a1a1aa; line-height: 1.45; margin: 0;">Organização documental prévia, elaboração de relatórios técnicos de cumprimento do objeto, conciliação e sistematização de evidências para aprovação nos órgãos de controle.</p>
+                    </div>
+
+                    <div class="solution-item-box">
+                        <div class="solution-icon-wrap">08</div>
+                        <h4 style="font-size: 0.88rem; font-weight: 700; color: #f4f4f5; margin-bottom: 0.4rem;">Gestão e Consultoria Institucional</h4>
+                        <p style="font-size: 0.77rem; color: #a1a1aa; line-height: 1.45; margin: 0;">Análise de editais de chamamento público, organização e padronização de processos de governança e fortalecimento contínuo da capacidade gestora das OSCs.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Detalhamento de Governança (Missão, Visão e Valores) -->
+            <div style="margin-top: 2rem; border-top: 1px dashed var(--border); padding-top: 1.5rem;">
+                <h3 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 0.35rem; color: #fafafa;">Módulo de Governança Institucional</h3>
+                <p style="font-size: 0.8rem; color: var(--muted-foreground); margin-bottom: 1rem;">Seção estruturada para transmitir a filosofia e solidez ética da Moriá aos parceiros e financiadores:</p>
+
+                <div class="governance-grid">
+                    <div style="padding: 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); background: rgba(24, 24, 27, 0.45);">
+                        <span class="badge badge-gold" style="margin-bottom: 0.65rem;">Missão</span>
+                        <h4 style="font-size: 0.95rem; font-weight: 700; color: #fafafa; margin-bottom: 0.5rem;">Fortalecer o Terceiro Setor</h4>
+                        <p style="font-size: 0.78rem; color: #a1a1aa; line-height: 1.5; margin: 0;">Oferecer consultoria especializada e soluções estratégicas para o fortalecimento do Terceiro Setor, auxiliando institutos, associações e Organizações da Sociedade Civil (OSCs) na estruturação, gestão, execução e avaliação de projetos, com foco na eficiência, na transparência e na geração de impacto social.</p>
+                    </div>
+
+                    <div style="padding: 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); background: rgba(24, 24, 27, 0.45);">
+                        <span class="badge badge-blue" style="margin-bottom: 0.65rem;">Visão</span>
+                        <h4 style="font-size: 0.95rem; font-weight: 700; color: #fafafa; margin-bottom: 0.5rem;">Referência em Gestão e Impacto</h4>
+                        <p style="font-size: 0.78rem; color: #a1a1aa; line-height: 1.5; margin: 0;">Ser referência em consultoria e gestão de projetos para o Terceiro Setor, reconhecida pela excelência técnica, pela confiança nas relações com os clientes e pela contribuição para o fortalecimento institucional e a transformação social.</p>
+                    </div>
+
+                    <div style="padding: 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); background: rgba(24, 24, 27, 0.45);">
+                        <span class="badge badge-green" style="margin-bottom: 0.65rem;">Valores</span>
+                        <h4 style="font-size: 0.95rem; font-weight: 700; color: #fafafa; margin-bottom: 0.5rem;">Pilares de Conformidade</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.35rem; margin-top: 0.4rem;">
+                            <span style="font-size: 0.72rem; padding: 0.2rem 0.5rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); border-radius: 4px; color: #e4e4e7;">Ética & Integridade</span>
+                            <span style="font-size: 0.72rem; padding: 0.2rem 0.5rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); border-radius: 4px; color: #e4e4e7;">Transparência</span>
+                            <span style="font-size: 0.72rem; padding: 0.2rem 0.5rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); border-radius: 4px; color: #e4e4e7;">Excelência Técnica</span>
+                            <span style="font-size: 0.72rem; padding: 0.2rem 0.5rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); border-radius: 4px; color: #e4e4e7;">Comprometimento</span>
+                            <span style="font-size: 0.72rem; padding: 0.2rem 0.5rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); border-radius: 4px; color: #e4e4e7;">Responsabilidade Social</span>
+                            <span style="font-size: 0.72rem; padding: 0.2rem 0.5rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); border-radius: 4px; color: #e4e4e7;">Eficiência & Inovação</span>
+                            <span style="font-size: 0.72rem; padding: 0.2rem 0.5rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); border-radius: 4px; color: #e4e4e7;">Parceria & Confiança</span>
+                            <span style="font-size: 0.72rem; padding: 0.2rem 0.5rem; background: rgba(255, 255, 255, 0.05); border: 1px solid var(--border); border-radius: 4px; color: #e4e4e7;">Legalidade & Compliance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Área Discreta de Clientes -->
+            <div style="margin-top: 2rem; border-top: 1px dashed var(--border); padding-top: 1.5rem;">
+                <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.35rem;">
+                    <h3 style="font-size: 1.05rem; font-weight: 700; color: #fafafa; margin: 0;">Área Discreta de Clientes & Instituições Atendidas</h3>
+                    <span class="badge" style="font-size: 0.65rem; background: rgba(255,255,255,0.05);">Prova Social Sóbria</span>
+                </div>
+                <p style="font-size: 0.8rem; color: var(--muted-foreground); margin-bottom: 0.75rem;">Para preservar o perfil corporativo da consultoria, a exibição de clientes adota um layout minimalista e confidencial, conferindo autoridade instantânea:</p>
+                
+                <div class="client-discrete-grid">
+                    <div class="client-discrete-item">
+                        <span class="client-dot"></span>
+                        <span>Institutos e Fundações Sociais</span>
+                    </div>
+                    <div class="client-discrete-item">
+                        <span class="client-dot"></span>
+                        <span>Associações Comunitárias</span>
+                    </div>
+                    <div class="client-discrete-item">
+                        <span class="client-dot"></span>
+                        <span>Organizações de Saúde (FNS)</span>
+                    </div>
+                    <div class="client-discrete-item">
+                        <span class="client-dot"></span>
+                        <span>Projetos Culturais & Esportivos</span>
+                    </div>
+                    <div class="client-discrete-item">
+                        <span class="client-dot"></span>
+                        <span>Parcerias Municipais & Estaduais</span>
+                    </div>
+                    <div class="client-discrete-item">
+                        <span class="client-dot"></span>
+                        <span>Projetos MROSC / Transferegov</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 02. Fluxo Operacional da Solução -->
+        <section id="operacoes">
+            <h2><span>02.</span> Metodologia & Fluxo de Execução</h2>
+            <p style="color: var(--muted-foreground); margin-bottom: 1.25rem;">Processo ágil e enxuto em 4 etapas sequenciais para garantir entrega em prazo recorde com qualidade máxima:</p>
+            
+            <div class="step-list">
+                <div class="step-item">
+                    <span class="step-num">1</span>
+                    <div class="step-content">
+                        <h4>Planejamento, Textos & Arquitetura</h4>
+                        <p>Validação final da redação institucional da Moriá, organização dos detalhes das 8 soluções e consolidação da lista discreta de clientes.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <span class="step-num">2</span>
+                    <div class="step-content">
+                        <h4>Desenvolvimento Frontend em Next.js & UI</h4>
+                        <p>Construção da interface com TailwindCSS e componentes otimizados, aplicando a identidade da marca Moriá (azul marinho e dourado) e logotipo do Transferegov.br.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <span class="step-num">3</span>
+                    <div class="step-content">
+                        <h4>Integração Supabase, WhatsApp & SEO</h4>
+                        <p>Configuração de infraestrutura moderna com Supabase, canal direto para o WhatsApp e metatags para indexação no Google.</p>
+                    </div>
+                </div>
+
+                <div class="step-item">
+                    <span class="step-num">4</span>
+                    <div class="step-content">
+                        <h4>Deploy na Vercel & Apontamento de Domínio</h4>
+                        <p>Publicação em alta disponibilidade na Vercel com CDN global, ativação de SSL automático e entrega final pronta para uso.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03. Stack de Tecnologia -->
+        <section id="tecnologias">
+            <h2><span>03.</span> Stack de Tecnologia</h2>
+            <div class="tech-pills">
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Vercel</span>
+                <span class="tech-badge">Supabase</span>
+                <span class="tech-badge">TailwindCSS</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">Geist Typography</span>
+                <span class="tech-badge">WhatsApp API</span>
+            </div>
+        </section>
+
+        <!-- 04. Etapas de Desenvolvimento & Cronograma -->
+        <section id="cronograma">
+            <h2><span>04.</span> Etapas de Desenvolvimento & Cronograma</h2>
+            
+            <div class="table-wrapper desktop-only">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 35%">Etapa de Entrega</th>
+                            <th>Escopo Técnico Principal</th>
+                            <th style="width: 18%">Prazo Estimado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: 700; color: #fafafa;">1. Planejamento & Arquitetura</td>
+                            <td>Consolidação dos textos, estrutura visual e definição das seções.</td>
+                            <td style="font-family: var(--font-mono); color: #e4e4e7;">1 dia útil</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 700; color: #fafafa;">2. Frontend & Vitrine das 8 Soluções</td>
+                            <td>Codificação em Next.js e TailwindCSS de todas as seções e soluções.</td>
+                            <td style="font-family: var(--font-mono); color: #e4e4e7;">2 dias úteis</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 700; color: #fafafa;">3. Governança, Clientes & WhatsApp</td>
+                            <td>Área discreta de clientes, bloco de governança e canal de WhatsApp.</td>
+                            <td style="font-family: var(--font-mono); color: #e4e4e7;">1 dia útil</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 700; color: #fafafa;">4. Homologação & Deploy Vercel</td>
+                            <td>Testes responsivos, configuração de DNS no domínio oficial e publicação na Vercel.</td>
+                            <td style="font-family: var(--font-mono); color: #e4e4e7;">1 dia útil</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Mobile Cronograma Cards -->
+            <div class="mobile-only">
+                <div class="mobile-module-card">
+                    <div class="mobile-card-header">
+                        <h4>Etapa 1: Planejamento</h4>
+                        <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #a1a1aa;">1 dia útil</span>
+                    </div>
+                    <p>Consolidação do conteúdo institucional e estrutura do site.</p>
+                </div>
+                <div class="mobile-module-card">
+                    <div class="mobile-card-header">
+                        <h4>Etapa 2: Frontend & 8 Soluções</h4>
+                        <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #a1a1aa;">2 dias úteis</span>
+                    </div>
+                    <p>Desenvolvimento em Next.js das seções institucionais e do hub de soluções.</p>
+                </div>
+                <div class="mobile-module-card">
+                    <div class="mobile-card-header">
+                        <h4>Etapa 3: Clientes & WhatsApp</h4>
+                        <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #a1a1aa;">1 dia útil</span>
+                    </div>
+                    <p>Área de clientes, governança institucional e botões de contato direto.</p>
+                </div>
+                <div class="mobile-module-card">
+                    <div class="mobile-card-header">
+                        <h4>Etapa 4: Deploy na Vercel</h4>
+                        <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #a1a1aa;">1 dia útil</span>
+                    </div>
+                    <p>Publicação com SSL automático e apontamento do domínio oficial.</p>
+                </div>
+            </div>
+
+            <p class="text-muted" style="font-size: 0.8rem; text-align: right; margin-top: 0.75rem;">Prazo total estimado para entrega: <strong style="color: #22c55e;">5 dias úteis</strong>.</p>
+        </section>
+
+        <!-- 05. Investimento -->
+        <section id="investimento">
+            <h2><span>05.</span> Investimento & Condições</h2>
+            
+            <div class="calc-box">
+                <div class="calc-inputs">
+                    <div class="calc-title">Escopo Integral Incluso no Pacote</div>
+                    
+                    <div class="calc-option" style="cursor: default;">
+                        <input type="checkbox" checked disabled>
+                        <span>Desenvolvimento Completo com Next.js & Supabase<br><span class="text-muted" style="font-size: 0.7rem;">Design exclusivo, componentes modernos e total responsividade mobile.</span></span>
+                    </div>
+
+                    <div class="calc-option" style="cursor: default;">
+                        <input type="checkbox" checked disabled>
+                        <span>Vitrine das 8 Soluções & Governança<br><span class="text-muted" style="font-size: 0.7rem;">Transferegov, FNS, MROSC, Orçamentos, Prestação de Contas e Missão/Valores.</span></span>
+                    </div>
+                    
+                    <div class="calc-option" style="cursor: default;">
+                        <input type="checkbox" checked disabled>
+                        <span>Área Discreta de Clientes & Integração WhatsApp<br><span class="text-muted" style="font-size: 0.7rem;">Prova social corporativa sóbria e canal de captação ágil de novas parcerias.</span></span>
+                    </div>
+
+                    <div class="calc-option" style="cursor: default;">
+                        <input type="checkbox" checked disabled>
+                        <span>Deploy na Vercel & Garantia Vitalícia<br><span class="text-muted" style="font-size: 0.7rem;">Hospedagem global de alta velocidade, SSL automático e suporte contínuo vitalício.</span></span>
+                    </div>
+                </div>
+
+                <div class="calc-result">
+                    <div>
+                        <span class="badge" style="background-color: var(--muted); border-color: var(--border);">Orçamento Fechado</span>
+                        
+                        <div class="price-display">
+                            <span class="price-label">Valor Total do Projeto</span>
+                            <div style="display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap;">
+                                <span class="price-num" style="color: #22c55e; font-size: 2.2rem;">R$ 1.000</span>
+                            </div>
+                        </div>
+                        
+                        <div class="calc-rows" style="border: 1px solid var(--border); border-radius: var(--radius); padding: 0.75rem 1rem; background: rgba(24, 24, 27, 0.45); margin-top: 0.75rem;">
+                            <div style="font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #a1a1aa; margin-bottom: 0.5rem;">Condição de Pagamento (2x de R$ 500)</div>
+                            
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0; border-bottom: 1px solid var(--border);">
+                                <span style="font-size: 0.85rem; color: #f4f4f5; font-weight: 500;">1ª Parcela (Entrada):</span>
+                                <span style="font-size: 0.95rem; font-weight: 700; color: #22c55e; font-family: var(--font-mono);">R$ 500</span>
+                            </div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; padding: 0.45rem 0 0.15rem 0;">
+                                <span style="font-size: 0.85rem; color: #f4f4f5; font-weight: 500;">2ª Parcela (Entrega):</span>
+                                <span style="font-size: 0.95rem; font-weight: 700; color: #22c55e; font-family: var(--font-mono);">R$ 500</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="margin-top: 1.25rem;">
+                        <button class="btn btn-primary" style="width: 100%; white-space: nowrap; font-size: 0.82rem; font-weight: 700; letter-spacing: 0.03em; padding: 0.75rem 1rem;" id="submit-proposal-btn">APROVAR PROPOSTA VIA WHATSAPP</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 06. Condições Gerais -->
+        <section id="condicoes">
+            <h2><span>06.</span> Condições Gerais & Garantias</h2>
+            <div class="cond-list">
+                <div class="cond-item">
+                    <h4>Forma de Pagamento</h4>
+                    <p>• <strong>Valor Total:</strong> R$ 1.000,00.<br>
+                    • <strong>Condição:</strong> 2 parcelas de R$ 500,00 — sendo R$ 500,00 na entrada e R$ 500,00 na entrega.</p>
+                </div>
+                
+                <div class="cond-item" style="border: 1.5px solid rgba(59, 130, 246, 0.4); background: rgba(59, 130, 246, 0.05);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.25rem;">
+                        <h4 style="margin-bottom: 0; color: #93c5fd;">Garantia & Suporte Técnico</h4>
+                        <span style="font-size: 0.65rem; background: rgba(59, 130, 246, 0.2); color: #93c5fd; border: 1px solid rgba(59, 130, 246, 0.35); padding: 0.1rem 0.45rem; border-radius: 9999px; font-weight: 700; text-transform: uppercase;">Vitalício</span>
+                    </div>
+                    <p>Garantia e suporte técnico contínuo vitalício para manter a plataforma sempre estável, segura e plenamente operacional.</p>
+                </div>
+
+                <div class="cond-item">
+                    <h4>Propriedade Intelectual & Liberdade Total</h4>
+                    <p>Transferência de 100% dos direitos autorais, código-fonte e arquivos para a <strong>Moriá Consultoria e Projetos Ltda.</strong> após a quitação, sem qualquer amarração de mensalidades proprietárias.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <h3>Pronto para Transformar a Presença Digital da Moriá?</h3>
+            <p style="margin-top: 0.35rem; color: var(--muted-foreground);">Clique no botão abaixo para aprovar a proposta e iniciarmos a etapa de design e arquitetura imediatamente.</p>
+            <div class="footer-actions" style="justify-content: center;">
+                <button class="btn btn-primary" style="white-space: nowrap;" id="footer-accept-btn">APROVAR PROPOSTA</button>
+            </div>
+            <div class="credits">
+                // 2026 Moriá Consultoria e Projetos Ltda. • Proposta Comercial & Técnica Elaborada por Jônathas Quintanilha (Garré).
+            </div>
+        </footer>
+    </div>
+
+    <!-- Mobile Floating Dock -->
+    <div class="mobile-dock aggressive-shadow" id="mobile-dock">
+        <a href="#escopo" class="dock-btn" title="Módulos">Mód</a>
+        <a href="#operacoes" class="dock-btn" title="Fluxos">Fluxo</a>
+        <a href="#tecnologias" class="dock-btn" title="Tecnologia">Tech</a>
+        <a href="#cronograma" class="dock-btn" title="Etapas">Etapas</a>
+        <a href="#investimento" class="dock-btn" title="Orçamento">Orçam</a>
+        <a href="#condicoes" class="dock-btn" title="Garantias">Garant</a>
+    </div>
+
+    <!-- JS Logic -->
+    <script>
+        const submitBtn = document.getElementById('submit-proposal-btn');
+        const acceptBtn = document.getElementById('footer-accept-btn');
+
+        function sendWhatsapp() {
+            const message = "Olá, Jônathas! Aprovamos a proposta para o Desenvolvimento do Novo Site Institucional da Moriá Consultoria e Projetos. Quais são os próximos passos para darmos início?";
+            window.open(`https://wa.me/5521982188560?text=${encodeURIComponent(message)}`, '_blank');
+        }
+
+        if (submitBtn) submitBtn.addEventListener('click', sendWhatsapp);
+        if (acceptBtn) acceptBtn.addEventListener('click', sendWhatsapp);
+    </script>
+</body>
+</html>
